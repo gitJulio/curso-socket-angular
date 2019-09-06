@@ -1,8 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin-bottom: 100px;
 
+}
 footer{
     position:fixed;
     bottom:0px;
     width: 100%;
     left:0px;
+}
+
+#chat-mensaje{
+    height: 300px;
+    border:1px solid #000000;
+    border-radius: 5px;
+    overflow-y: scroll;
 }

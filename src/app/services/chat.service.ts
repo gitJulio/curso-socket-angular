@@ -12,13 +12,14 @@ export class ChatService {
 
 
   sendMensaje(mensaje:string){
-
     const payload ={
       de:'Julio',
       cuerpo:mensaje
     }
-
     this.wsService.emit('mensaje', payload)
+  }
 
+  getMensaje(){
+    return this.wsService.listen('mensaje-nuevo')
   }
 }
