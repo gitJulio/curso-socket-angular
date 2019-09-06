@@ -10,9 +10,13 @@ footer{
     left:0px;
 }
 
-#chat-mensaje{
+#chat-mensajes{
     height: 300px;
     border:1px solid #000000;
     border-radius: 5px;
     overflow-y: scroll;
+}
+
+.chat-input{
+    margin-top: 10px;
 }
