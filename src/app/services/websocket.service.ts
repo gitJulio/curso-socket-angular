@@ -11,7 +11,7 @@ export class WebsocketService {
   public usuario:Usuario
   constructor(
     private socket:Socket
-  ) { 
+  ) {
 
     this.checkStatus()
 
@@ -31,8 +31,8 @@ export class WebsocketService {
 
   emit(evento:string, payload?:any, callback?:Function){
     console.log('Emitiendo', evento);
-    
-    //amit('EVENTO',payload,callback?)
+
+    //emit('EVENTO',payload,callback?)
     this.socket.emit(evento, payload, callback);
   }
 
@@ -42,11 +42,10 @@ export class WebsocketService {
 
   loginWs(nombre:string){
     console.log('Configurando', nombre);
-    
-    this.socket.emit('configurar-usuario',{nombre},(resp)=>{
-      console.log(resp);
-      
-    })
+    this.socket.emit('configurar-usuario', {nombre}, resp=>{
+        console.log(resp)
+      }
+    );
   }
 
 

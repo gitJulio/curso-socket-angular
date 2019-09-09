@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
   }
 
   ingresar(){
-    console.log(this.nombre);
     this.wsService.loginWs(this.nombre)
   }
 
